@@ -1,19 +1,17 @@
 <?php
 $page = array();
-$page['home'] = 'mod/home/home.php';
-$page['prestation'] = 'mod/prestation/prestation.php';
+
+$page['accueil'] = 'mod/accueil/accueil.php';
+$page['prestations'] = 'mod/prestations/prestations.php';
 $page['galerie_photo'] = 'mod/galerie_photo/galerie_photo.php';
 
-$page['administration_produits'] = 'mod/administration_produits/administration_produits.php';
-$page['administration_photos'] = 'mod/administration_photos/administration_photos.php';
+// page pour l'admin
+$page['administration_prestations'] = 'mod/administration_prestations/administration_prestations.php';
+$page['administration_galerie'] = 'mod/administration_galerie/administration_galerie.php';
+$page['listing_produits'] = 'mod/listing_produits/listing_produits.php';
+$page['listing_users'] = 'mod/listing_users/listing_users.php';
+$page['listing_galerie'] = 'mod/listing_galerie/listing_galerie.php';
 
-$page['listing_produits'] = 'mod/listing_produit/listing_produits.php';
-$page['listing_user'] = 'mod/listing_user/listing_user.php';
-$page['listing_galerie_photo'] = 'mod/listing_galerie_photo/listing_galerie_photo.php';
-
+$page['inscription'] = 'mod/inscription/inscription.php';
+$page['deconnection'] = 'mod/deconnection/deconnection.php';
 $page['connection'] = 'mod/connection/connection.php';
-
-$page['logout'] = 'mod/logout/logout.php';
-$page['login'] = 'mod/login/login.php';
-
-
