@@ -14,7 +14,7 @@ if (user_is_admin()) {
         @unlink('pic/images/produits/' . $produit);
 
         // Redirection vers le listing des produit
-        header("location: index.php?page=listing_produits");
+        header("location: index.php?page=listing_prestations");
     }
 
     // Requete SQL
@@ -23,7 +23,7 @@ if (user_is_admin()) {
     // Execution requete
     $rs = query($sql);
 
-    $html = '<h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Listing Prestations</h1>';
+    $html = '<h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Listing prestations</h1>';
     $html .= '<ul class="max-w-4xl mx-auto">';
     // Test retour requete
     if ($rs && mysqli_num_rows($rs)) {
@@ -38,12 +38,11 @@ if (user_is_admin()) {
             $html .= '      <a class="text-blue-500 underline" href="index.php?page=administration_prestations&id=' . $data_produits['id'] . '">';
             $html .= '                    Éditer';
             $html .= '      </a>';
-            $html .= '      <a class="text-red-500 underline" onclick="if(window.confirm(\'Etes vous sur ?\')) return true; else return false;" href="index.php?page=listing_prestations&delete_id=' . $data_produits['id'] . '">';
+            $html .= '      <a class="text-red-500 underline" onclick="if(window.confirm(\'Confirmer la suppression du produit ?\')) return true; else return false;" href="index.php?page=listing_prestations&delete_id=' . $data_produits['id'] . '">';
             $html .= '                    Supprimer';
             $html .= '      </a>';
             $html .= '</li>';
         }
-
         $html .= '</ul>';
     }
 }
