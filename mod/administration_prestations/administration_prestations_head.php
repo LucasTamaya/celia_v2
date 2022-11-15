@@ -1,0 +1,1 @@
+<title>CeBeauté Admin</title>

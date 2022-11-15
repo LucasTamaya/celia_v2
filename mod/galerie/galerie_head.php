@@ -1,0 +1,1 @@
+<title>Galerie photo</title>
