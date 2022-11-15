@@ -16,7 +16,7 @@
         $sql = "UPDATE t_produit SET fichier=NULL WHERE id=".$id_produit;
         squery($sql);
 
-        header("location: index.php?page=administration_produits&id=".$id_produit);
+        header("location: index.php?page=administration_prestations&id=".$id_produit);
     }
 
     // Gestion du retour du formulaire
@@ -61,7 +61,7 @@
 
 
         // Redirection sur la page de modification du produit (meme page mais avec id_produit)
-        header('location: index.php?page=administration_produits&id='.$id_produit);
+        header('location: index.php?page=administration_prestations&id='.$id_produit);
     }
 
     if(isset($_GET['id'])) {
@@ -95,7 +95,7 @@
         $html.= '       <h1>Nouvel Utilisateur<span>Pour créer le produit, remplir ce formulaire...</span></h1>';
 
     // Formulaire de modification des information sur l'utilisateur
-    $html.= '       <form method="POST" action="index.php?page=administration_produits" enctype="multipart/form-data">';
+    $html.= '       <form method="POST" action="index.php?page=administration_prestations" enctype="multipart/form-data">';
 
     // Nom et Prénom
     $html.= '           <div class="section"><span>1</span>titre et description</div>';
@@ -138,7 +138,7 @@
     $html.= '               <label>fichier image du produit <input type="file" name="my_file"/>';
     if(is_file('images/produits/'.$data['fichier'])){
         $html.= '               <a href="images/produits/'.$data['fichier'].'" class="imageZoom"> voir image</a>';
-        $html.= '               <a href="index.php?page=administration_produits&id='.$data['id'].'&supp_produit=1" ">DELETE image</a>';
+        $html.= '               <a href="index.php?page=administration_prestations&id='.$data['id'].'&supp_produit=1" ">DELETE image</a>';
     }
     $html.= '               </label>';
     $html.= '           </div>';
