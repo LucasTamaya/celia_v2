@@ -1,9 +1,10 @@
 <?php
 $page = array();
 
+// page pour les clients
 $page['accueil'] = 'mod/accueil/accueil.php';
 $page['prestations'] = 'mod/prestations/prestations.php';
-$page['galerie_photo'] = 'mod/galerie_photo/galerie_photo.php';
+$page['galerie'] = 'mod/galerie/galerie.php';
 
 // page pour l'admin
 $page['administration_prestations'] = 'mod/administration_prestations/administration_prestations.php';
