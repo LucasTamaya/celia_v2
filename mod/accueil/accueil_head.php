@@ -1,0 +1,1 @@
+<title>CeBeauté - Accueil</title>

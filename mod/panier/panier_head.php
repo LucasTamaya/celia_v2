@@ -1,1 +1,1 @@
-<title> <?php echo $TITLE; ?> - prestation </title>
+<title>CeBeauté - Panier</title>
