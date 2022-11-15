@@ -41,9 +41,9 @@ class Page
             $this->header .= '           Ajouter une prestation';
             $this->header .= '       </a>';
 
-            // Page administration_clients
-            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=administration_clients">';
-            $this->header .= '           Administration client';
+            // Page listing_utilistateurs
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=listing_utilistateurs">';
+            $this->header .= '           Listing Utilistateurs';
             $this->header .= '       </a>';
 
             // Page administration_photos
@@ -77,6 +77,10 @@ class Page
             $this->header .= '       </a>';
         }
         $this->header .= '    </nav>';
+        if(isset($_SESSION[SESSION_NAME]['id_user']) && !empty($_SESSION[SESSION_NAME]['id_user'])){
+            $this->header.= '<div> ma session ===>      '.$_SESSION[SESSION_NAME]['nom_user'].'';
+            $this->header.= '       <a href="index.php?page=deconnection">Deconnection</a></div>';
+            }
     }
 
 

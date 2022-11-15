@@ -32,9 +32,9 @@ $html .='<div class="zone_contenu_clean">';
 $html .= '   <div class="form-style">';
 $html .= '       <h1>Listing Pays<span>Listing des pays dans le site...</span></h1>';
 
-// Bouton Ajout d'un utilisateur
+// Bouton Ajout d'un produit
 $html .= '   <div class="new_pays">';
-$html .= '       <a href="index.php?page=administration_produits">';
+$html .= '       <a href="index.php?page=administration_prestations">';
 $html .= '           Ajout produit';
 $html .= '       </a>';
 $html .= '   </div>';

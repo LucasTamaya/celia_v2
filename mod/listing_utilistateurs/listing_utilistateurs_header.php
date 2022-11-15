@@ -8,7 +8,7 @@ if (user_is_admin()) {
         sql_simple_delete('t_user', $_GET['delete_id']);
 
         // Redirection vers le listing des utilisateurs
-        header("location: index.php?page=listing_user");
+        header("location: index.php?page=listing_utilistateurs");
     }
 
     // Requete SQL
@@ -26,12 +26,6 @@ if (user_is_admin()) {
         $html .='<div class="zone_contenu_clean">';
         $html .= '   <div class="form-style">';
         $html .= '       <h1>Listing Utilisateur<span>Listing des utilisateurs dans le site...</span></h1>';
-
-        // Bouton Ajout d'un utilisateur
-        $html .= '   <div class="new_user">';
-        $html .= '       <a href="index.php?page=connection"> AJout un utilisateur';
-        $html .= '       </a>';
-        $html .= '   </div>';
 
         // Première ligne du tableau
         $html .= '        <table style="width:80%;margin:auto;padding:20px;" cellspacing="0" cellpadding="0">';
@@ -58,9 +52,6 @@ if (user_is_admin()) {
 
             // Actions
             $html.= '            <td class="tab_td">';
-            $html.= '                <a href="index.php?page=connection&id='.$data_user['id'].'">';
-            $html.= '                    modifier l\'utilisteur';
-            $html.= '                </a>';
             $html.= '                <a onclick="if(window.confirm(\'Etes vous sur ?\')) return true; else return false;" href="index.php?page=listing_user&delete_id='.$data_user['id'].'">';
             $html.= '                    supprimer l\'utilisteur';
             $html.= '                </a>';
