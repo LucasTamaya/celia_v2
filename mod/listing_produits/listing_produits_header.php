@@ -12,9 +12,6 @@ if (user_is_admin()) {
         //suppr fichier image
 
         @unlink('pic/images/produits/' . $produit);
-
-        // Redirection vers le listing des produit
-        header("location: index.php?page=listing_produits");
     }
 
     // Requete SQL
