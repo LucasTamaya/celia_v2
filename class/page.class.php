@@ -76,15 +76,13 @@ class Page
             $this->header .= '           Me connecter';
             $this->header .= '       </a>';
         }
+        $this->header .= '    </nav>';
     }
 
 
     private function build_footer()
     {
-
-        $this->footer = '    </div>';
-        $this->footer .= '    <div id="html_footer"> ';
-        $this->footer .= '    </div>';
+        $this->footer .= '    <div id="html_footer"></div>';
         $this->footer .= '</body>';
     }
 }
