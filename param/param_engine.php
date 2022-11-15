@@ -1,5 +1,6 @@
 <?php
 $page = array();
+
 // page pour les clients
 $page['accueil'] = 'mod/accueil/accueil.php';
 $page['prestations'] = 'mod/prestations/prestations.php';

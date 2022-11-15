@@ -65,7 +65,7 @@ if($rs && mysqli_num_rows($rs)){
 
         // Actions
         $html.= '            <td class="tab_td">';
-        $html.= '                <a href="index.php?page=administration_produits&id='.$data_produits['id'].'">';
+        $html.= '                <a href="index.php?page=administration_prestations&id='.$data_produits['id'].'">';
         $html.= '                    Editer le produit';
         $html.= '                </a>';
         $html.= '                <a onclick="if(window.confirm(\'Etes vous sur ?\')) return true; else return false;" href="index.php?page=listing_produits&delete_id='.$data_produits['id'].'">';
