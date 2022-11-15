@@ -60,7 +60,7 @@ if (user_is_admin()) {
 
 
         // Redirection sur la page de modification du produit (meme page mais avec id_produit)
-        header('location: index.php?page=listing_prestations');
+        header('location: index.php?page=administration_prestations&id=' . $id_produit);
     }
 
     if (isset($_GET['id'])) {
