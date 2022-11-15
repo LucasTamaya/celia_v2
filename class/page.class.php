@@ -51,9 +51,9 @@ class Page
             $this->header .= '           Administration galerie';
             $this->header .= '       </a>';
 
-            // Page listing_produit
-            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=listing_produits">';
-            $this->header .= '           Listing produit';
+            // Page listing_prestations
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=listing_prestations">';
+            $this->header .= '           Listing prestations';
             $this->header .= '       </a>';
         } else {
             // Accueil
