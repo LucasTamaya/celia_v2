@@ -43,12 +43,12 @@ class Page
 
             // Page administration_clients
             $this->header .= '       <a class="text-white font-semibold" href="index.php?page=administration_clients">';
-            $this->header .= '           Administration Client';
+            $this->header .= '           Administration client';
             $this->header .= '       </a>';
 
             // Page administration_photos
             $this->header .= '       <a class="text-white font-semibold" href="index.php?page=administration_galerie">';
-            $this->header .= '           Administration Galerie';
+            $this->header .= '           Administration galerie';
             $this->header .= '       </a>';
 
             // Page listing_produit
@@ -83,8 +83,6 @@ class Page
     {
         $this->footer = '    </div>';
         $this->footer .= '    <div id="html_footer"> ';
-        //    $this->footer.= '       '.$_SESSION[SESSION_NAME]['nom_user'].'<br/>';
-        //   $this->footer.= '       <a href="index.php?page=logout">se deconnecter</a>';
         $this->footer .= '    </div>';
         $this->footer .= '</body>';
     }
