@@ -72,7 +72,7 @@ class Page
             $this->header .= '       </a>';
 
             // Formulaire de connexion
-            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=connexion">';
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=connection">';
             $this->header .= '           Me connecter';
             $this->header .= '       </a>';
         }
