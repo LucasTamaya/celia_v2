@@ -1,97 +1,39 @@
 <?php
-  
+$message_error = "";
 
-    // Gestion du retour du formulaire
-    if(isset($_POST) && !empty($_POST)){
-        $id_user = $_POST['id_user'];
+// Test retour formulaire
+if (isset($_POST) && !empty($_POST)) {
+    // Verification login et mot de passe avec les données en BDD
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
 
-        $h = array();
-        $h['nom'] = $_POST['form_nom'];
-        $h['prenom'] = $_POST['form_prenom'];
+    $sql = 'SELECT * FROM t_user WHERE email="' . $email . '" LIMIT 1;';
 
-        // Gestion du Champs Mot de Passe
-        if(!empty($_POST['form_password'])){
-            $h['password'] = md5($_POST['form_password']);
-        }
-        $h['email'] = $_POST['form_email'];
+    $rs = query($sql);
 
+    if ($rs && mysqli_num_rows($rs)) {
+        $data = mysqli_fetch_assoc($rs);
+        if ($password == $data['password']) {
+            // Enregistrement des informations en session
+            $_SESSION[SESSION_NAME]['id_user'] = $data['id'];
+            $_SESSION[SESSION_NAME]['nom_user'] = $data['prenom'] . ' ' . $data['nom'];
 
-
-        // Enregistrement en BDD des modifications
-        if($id_user){
-            // Update
-            sql_simple_update('t_user',$id_user,$h);
+            header("location: index.php");
         } else {
-            // New
-            $id_user = sql_simple_insert('t_user',$h);
+            $message_error = '<p class="text-sm text-red-500">Email ou mot de passe incorrect</p>';
         }
-
-      
-
-        // Redirection sur la page de modification de l'utilisateur (meme page mais avec id_user)
-        header('location: index.php?page=connection&id='.$id_user);
+    } else {
+        $message_error = '<p class="text-sm text-red-500">Email ou mot de passe incorrect</p>';
     }
-    //bloquer aux pas admin
-    if (user_is_admin()) {
-    
-    if(isset($_GET['id'])) {
-        // Modification
-        $id_user = $_GET['id'];
-        // Recuperation des informations depuis la BDD
-        $sql = "SELECT * FROM t_user WHERE id=" . $id_user;
-        $rs = query($sql);
-        if($rs && mysqli_num_rows($rs))
-            $data = mysqli_fetch_assoc($rs);
-    }} else {
-        // On est en Creation
-        $id_user = 0;
-        $data = array();
-        $data['nom'] = '';
-        $data['prenom'] = '';
-        $data['email'] = '';
-    }
+}
 
-
-    $html = '<div class="zone_contenu_clean">';
-
-    // Formulaire de modification des informations de l'utilisateur
-    $html.= '   <div class="form-style">';
-    if($id_user > 0)
-        $html.= '       <h1>Modification<span>Pour modifier l\'utilisateur, remplir ce formulaire...</span></h1>';
-    else
-        $html.= '       <h1>Nouvel Utilisateur<span>Pour créer l\'utilisateur, remplir ce formulaire...</span></h1>';
-
-    // Formulaire de modification des information sur l'utilisateur
-    $html.= '       <form method="POST" action="index.php?page=connection" enctype="multipart/form-data">';
-
-    // Nom et Prénom
-    $html.= '           <div class="section"><span>1</span>Nom et Prénom</div>';
-    $html.= '           <div class="inner-wrap-l">';
-    $html.= '               <label>Nom <input type="text" name="form_nom" value="'.$data['nom'].'"/></label>';
-    $html.= '           </div>';
-    $html.= '           <div class="inner-wrap-r">';
-    $html.= '               <label>Prénom <input type="text" name="form_prenom" value="'.$data['prenom'].'"/></label>';
-    $html.= '           </div>';
-    $html.= '           <div class="inner-wrap-l">';
-    $html.= '               <label>e-mail <input type="email" name="form_email" value="'.$data['email'].'"/></label>';
-    $html.= '           </div>';
-
-  
-    $html.= '           <div class="inner-wrap-r">';
-    $html.= '               <label>Mot de passe <input type="password" name="form_password" value=""/></label>';
-    $html.= '           </div>';
-
-
-    // Bouton Enregistrer
-    $html.= '           <div class="button-section">';
-    $html.= '               <input type="submit" name="Enregistrer" />';
-    $html.= '           </div>';
-
-    // Champs caché...
-    $html.= '           <input type="hidden" name="id_user" id="id_user" value="'.$id_user.'" />';
-
-    $html.= '       </form>';
-    $html.= '   </div>';
-    $html.= '</div>';
-
-?>
+// formulaire de connexion
+$html = '<div class="mt-28 max-w-[400px] mx-auto border-2 rounded p-5">';
+$html .= '    <h1 class="text-3xl text-blue-900 font-semibold mb-5">Connexion</h1>';
+$html .= '    <form action="index.php?page=connection" method="POST" id="form_co" name="form_co">';
+$html .= '        <input class="w-full p-2 border rounded" type="text" name="email" id="email" placeholder="Email"/><br/><br/>';
+$html .= '        <input class="w-full p-2 border rounded" type="password" name="password" id="password" placeholder="Mot de passe"/> <br/><br/>';
+$html .= '        <button class="w-full py-2 rounded text-white bg-blue-900" type="submit">Connexion</button>';
+$html .= '    </form>';
+$html .=      $message_error;
+$html .= '</div>';
