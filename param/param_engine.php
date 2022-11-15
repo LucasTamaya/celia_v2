@@ -1,12 +1,19 @@
 <?php
 $page = array();
-// pages pour les clients
-$page['accueil'] = 'mod/accueil/accueil.php';
-$page['prestations'] = 'mod/prestations/prestations.php';
-$page['galerie'] = 'mod/galerie/galerie.php';
+$page['home'] = 'mod/home/home.php';
+$page['prestation'] = 'mod/prestations/prestation.php';
+$page['galerie_photo'] = 'mod/galerie_photo/galerie_photo.php';
 
-// page pour l'admin
-$page['administration_clients'] = 'mod/administration_clients/administration_clients.php';
-$page['administration_prestations'] = 'mod/administration_prestations/administration_prestations.php';
-$page['administration_galerie'] = 'mod/administration_galerie/administration_galerie.php';
-$page['listing_produits'] = 'mod/listing_produits/listing_produits.php';
+$page['administration_produits'] = 'mod/administration_produits/administration_produits.php';
+$page['administration_photos'] = 'mod/administration_photos/administration_photos.php';
+
+$page['listing_produits'] = 'mod/listing_produit/listing_produits.php';
+$page['listing_user'] = 'mod/listing_user/listing_user.php';
+$page['listing_galerie_photo'] = 'mod/listing_galerie_photo/listing_galerie_photo.php';
+
+$page['connection'] = 'mod/connection/connection.php';
+
+$page['logout'] = 'mod/logout/logout.php';
+$page['login'] = 'mod/login/login.php';
+
+
