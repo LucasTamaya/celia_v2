@@ -10,7 +10,7 @@ $page['panier'] = 'mod/panier/panier.php';
 // page pour l'admin
 $page['administration_prestations'] = 'mod/administration_prestations/administration_prestations.php';
 $page['administration_galerie'] = 'mod/administration_galerie/administration_galerie.php';
-$page['listing_produits'] = 'mod/listing_produits/listing_produits.php';
+$page['listing_prestations'] = 'mod/listing_prestations/listing_prestations.php';
 $page['listing_utilistateurs'] = 'mod/listing_utilistateurs/listing_utilistateurs.php';
 $page['listing_galerie'] = 'mod/listing_galerie/listing_galerie.php';
 
