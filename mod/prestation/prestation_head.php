@@ -1,1 +1,0 @@
-<title> <?php echo $TITLE; ?> - prestation </title>

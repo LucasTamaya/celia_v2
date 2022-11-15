@@ -1,1 +1,1 @@
-<title> <?php echo $TITLE; ?> - Page Listing Pays </title>
+<title> <?php echo $TITLE; ?> - prestation </title>
