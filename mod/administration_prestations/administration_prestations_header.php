@@ -15,7 +15,7 @@ if (user_is_admin()) {
         $sql = "UPDATE t_produit SET fichier=NULL WHERE id=" . $id_produit;
         squery($sql);
 
-        header("location: index.php?page=administration_produits&id=" . $id_produit);
+        header("location: index.php?page=administration_prestations&id=" . $id_produit);
     }
 
     // Gestion du retour du formulaire
@@ -60,7 +60,7 @@ if (user_is_admin()) {
 
 
         // Redirection sur la page de modification du produit (meme page mais avec id_produit)
-        header('location: index.php?page=administration_produits&id=' . $id_produit);
+        header('location: index.php?page=administration_prestations&id=' . $id_produit);
     }
 
     if (isset($_GET['id'])) {
