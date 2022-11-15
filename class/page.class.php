@@ -42,7 +42,7 @@ class Page
             $this->header .= '       </a>';
 
             // Page listing_utilistateurs
-            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=listing_utilistateurs">';
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=listing_utilisateurs">';
             $this->header .= '           Listing Utilistateurs';
             $this->header .= '       </a>';
 
@@ -51,9 +51,9 @@ class Page
             $this->header .= '           Administration galerie';
             $this->header .= '       </a>';
 
-            // Page listing_produit
-            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=listing_produits">';
-            $this->header .= '           Listing produit';
+            // Page listing_prestations
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=listing_prestations">';
+            $this->header .= '           Listing prestations';
             $this->header .= '       </a>';
 
             // Page listing_galerie
@@ -75,17 +75,20 @@ class Page
             $this->header .= '       <a class="text-white font-semibold" href="index.php?page=galerie">';
             $this->header .= '           Galerie';
             $this->header .= '       </a>';
+        }
 
+        if (isset($_SESSION[SESSION_NAME]['id_user']) && !empty($_SESSION[SESSION_NAME]['id_user'])) {
+            // Déconnexion
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=deconnection">Déconnection</a></div>';
+        } else {
             // Formulaire de connexion
             $this->header .= '       <a class="text-white font-semibold" href="index.php?page=connection">';
             $this->header .= '           Me connecter';
             $this->header .= '       </a>';
         }
+
+
         $this->header .= '    </nav>';
-        if(isset($_SESSION[SESSION_NAME]['id_user']) && !empty($_SESSION[SESSION_NAME]['id_user'])){
-            $this->header.= '<div> ma session ===>      '.$_SESSION[SESSION_NAME]['nom_user'].'';
-            $this->header.= '       <a href="index.php?page=deconnection">Deconnection</a></div>';
-            }
     }
 
 

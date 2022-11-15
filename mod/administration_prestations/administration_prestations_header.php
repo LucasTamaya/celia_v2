@@ -86,7 +86,7 @@ if (user_is_admin()) {
 
     $html = '<div class="w-full h-[80vh] flex justify-center items-center" ">';
     $html .= '  <div class="flex-1 max-w-xl border-2 rounded p-5">';
-    if ($id_produit > 0)
+    if ($id_produit)
         $html .= '       <h1 class="text-2xl text-blue-900 font-semibold mb-3">Modifier une prestation</h1>';
     else
         $html .= '       <h1 class="text-2xl text-blue-900 font-semibold mb-3">Ajouter une prestation</h1>';
@@ -97,7 +97,6 @@ if (user_is_admin()) {
     $html .= '           <input class="p-1 border rounded" placeholder="Description" type="text" name="form_description" value="' . $data['description'] . '"/>';
     $html .= '           <input class="p-1 border rounded" placeholder="Prix" type="number" name="form_prix" value="' . $data['prix'] . '"/>';
     $html .= '           <input class="p-1 border rounded" placeholder="Durée" type="number" name="form_temps" value="' . $data['temps'] . '"/>';
-
     $sql_categorie = "SELECT * FROM t_categorie ORDER BY nom ASC";
     $rs_categorie = query($sql_categorie);
     $html .= '            <select class="p-1 border rounded" name="form_categorie" id="form_categorie">';
@@ -116,8 +115,10 @@ if (user_is_admin()) {
         $html .= '               <a href="images/produits/' . $data['fichier'] . '" class="imageZoom"> voir image</a>';
         $html .= '               <a href="index.php?page=administration_prestations&id=' . $data['id'] . '&supp_produit=1" ">DELETE image</a>';
     }
-
-    $html .= '           <button class="py-2 rounded text-white bg-blue-900" type="submit" name="Enregistrer">Ajouter la prestation</button>';
+    if ($id_produit)
+        $html .= '       <button class="py-2 rounded text-white bg-blue-900" type="submit" name="Enregistrer">Modifier la prestation</button>';
+    else
+        $html .= '       <button class="py-2 rounded text-white bg-blue-900" type="submit" name="Enregistrer">Ajouter la prestation</button>';
     $html .= '           <input type="hidden" name="id_produit" id="id_produit" value="' . $id_produit . '" />';
     $html .= '       </form>';
     $html .= '   </div>';
