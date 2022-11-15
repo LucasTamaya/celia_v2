@@ -15,7 +15,7 @@ if (user_is_admin()) {
         $sql = "UPDATE t_produit SET fichier=NULL WHERE id=" . $id_produit;
         squery($sql);
 
-        header("location: index.php?page=administration_prestations&id=".$id_produit);
+        header("location: index.php?page=administration_prestations&id=" . $id_produit);
     }
 
     // Gestion du retour du formulaire
@@ -60,7 +60,7 @@ if (user_is_admin()) {
 
 
         // Redirection sur la page de modification du produit (meme page mais avec id_produit)
-        header('location: index.php?page=administration_prestations&id='.$id_produit);
+        header('location: index.php?page=administration_prestations&id=' . $id_produit);
     }
 
     if (isset($_GET['id'])) {
@@ -97,7 +97,6 @@ if (user_is_admin()) {
     $html .= '           <input class="p-1 border rounded" placeholder="Description" type="text" name="form_description" value="' . $data['description'] . '"/>';
     $html .= '           <input class="p-1 border rounded" placeholder="Prix" type="number" name="form_prix" value="' . $data['prix'] . '"/>';
     $html .= '           <input class="p-1 border rounded" placeholder="Durée" type="number" name="form_temps" value="' . $data['temps'] . '"/>';
-
     $sql_categorie = "SELECT * FROM t_categorie ORDER BY nom ASC";
     $rs_categorie = query($sql_categorie);
     $html .= '            <select class="p-1 border rounded" name="form_categorie" id="form_categorie">';

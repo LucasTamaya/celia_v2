@@ -1,4 +1,5 @@
 <?php
+
 $html = ' <h1>prestations</h1>';
 $html .= '<h2><a href="index.php?page=prestations&fk_categorie=1">  Epilations  </a></h2>';
 $html .= '<h2><a href="index.php?page=prestations&fk_categorie=2">  Soins  </a></h2>';
