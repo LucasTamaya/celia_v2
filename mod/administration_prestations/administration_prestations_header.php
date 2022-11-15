@@ -80,7 +80,6 @@
         $data['fichier'] = '';
         $data['prix'] = '';
         $data['description'] = '';
-        //$data['ordre'] = '';
         $data['fk_categorie'] = '';
         $data['temps'] = '';
     }
@@ -160,6 +159,3 @@
     $html.= '   </div>';
     $html.= '</div>';
 }
-
-
-?>
