@@ -17,7 +17,8 @@ if (isset($_POST) && !empty($_POST)) {
             // Enregistrement des informations en session
             $_SESSION[SESSION_NAME]['id_user'] = $data['id'];
             $_SESSION[SESSION_NAME]['nom_user'] = $data['prenom'] . ' ' . $data['nom'];
-
+            $data_panier = array();
+            $_SESSION[SESSION_NAME]['panier'] = $data_panier;
             header("location: index.php");
         } else {
             $message_error = '<p class="text-sm text-red-500">Email ou mot de passe incorrect</p>';

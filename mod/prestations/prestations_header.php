@@ -1,4 +1,14 @@
 <?php
+
+if (isset($_GET['id'])) {
+
+    $id_produit = $_GET['id'];
+
+    array_push($_SESSION[SESSION_NAME]['panier'], array('fk_produit' => '' . $id_produit . '', 'quantite' => 1));
+}
+
+
+
 $html = ' <h1>prestations</h1>';
 $html .= '<h2><a href="index.php?page=prestations&fk_categorie=1">  Epilations  </a></h2>';
 $html .= '<h2><a href="index.php?page=prestations&fk_categorie=2">  Soins  </a></h2>';
@@ -23,7 +33,7 @@ if (isset($_GET['fk_categorie'])) {
             $html .= '<p> ' . $data_produits['prix'] . ' </p>';
             $html .= '<p> ' . $data_produits['temps'] . ' </p>';
             $html .= '<p> ' . $data_produits['description'] . ' </p>';
-            $html .= '<button id="' . $data_produits['id'] . '"> Ajouter au panier </button>';
+            $html .= '<a href="index.php?page=prestations&id=' . $data_produits['id'] . '"> Ajouter au panier </a>';
             $html .= '</div>';
         }
     }
@@ -40,7 +50,7 @@ if (isset($_GET['fk_categorie'])) {
             $html .= '<p> ' . $data_produits['prix'] . ' </p>';
             $html .= '<p> ' . $data_produits['temps'] . ' </p>';
             $html .= '<p> ' . $data_produits['description'] . ' </p>';
-            $html .= '<button id="' . $data_produits['id'] . '"> Ajouter au panier </button>';
+            $html .= '<a href="index.php?page=prestations&id=' . $data_produits['id'] . '"> Ajouter au panier </a>';
             $html .= '</div>';
         }
     }

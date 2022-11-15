@@ -55,6 +55,11 @@ class Page
             $this->header .= '       <a class="text-white font-semibold" href="index.php?page=listing_produits">';
             $this->header .= '           Listing produit';
             $this->header .= '       </a>';
+
+            // Page listing_galerie
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=listing_galerie">';
+            $this->header .= '           Listing Galerie Photo';
+            $this->header .= '       </a>';
         } else {
             // Accueil
             $this->header .= '       <a class="text-white font-semibold" href="index.php">';

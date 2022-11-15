@@ -21,9 +21,9 @@ if (user_is_admin()) {
     $html = '';
 
     // Test retour requete
-    if($rs && mysqli_num_rows($rs)){
+    if ($rs && mysqli_num_rows($rs)) {
 
-        $html .='<div class="zone_contenu_clean">';
+        $html .= '<div class="zone_contenu_clean">';
         $html .= '   <div class="form-style">';
         $html .= '       <h1>Listing Utilisateur<span>Listing des utilisateurs dans le site...</span></h1>';
 
@@ -38,7 +38,7 @@ if (user_is_admin()) {
 
         $i = 0;
         // Parcours des resultats
-        while($data_user = mysqli_fetch_assoc($rs)){
+        while ($data_user = mysqli_fetch_assoc($rs)) {
             $i++;
             // Boucle qui parcours les resultats de la requete
             if ($i % 2)
@@ -46,23 +46,21 @@ if (user_is_admin()) {
             else
                 $html .= '       <tr class="tab_row_2">';
 
-            $html.= '            <td class="tab_td">'.$data_user['id'].'</td>';
-            $html.= '            <td class="tab_td">'.$data_user['nom'].'</td>';
-            $html.= '            <td class="tab_td">'.$data_user['prenom'].'</td>';
+            $html .= '            <td class="tab_td">' . $data_user['id'] . '</td>';
+            $html .= '            <td class="tab_td">' . $data_user['nom'] . '</td>';
+            $html .= '            <td class="tab_td">' . $data_user['prenom'] . '</td>';
 
             // Actions
-            $html.= '            <td class="tab_td">';
-            $html.= '                <a onclick="if(window.confirm(\'Etes vous sur ?\')) return true; else return false;" href="index.php?page=listing_user&delete_id='.$data_user['id'].'">';
-            $html.= '                    supprimer l\'utilisteur';
-            $html.= '                </a>';
-            $html.= '             </td>';
-            $html.= '        </tr>';
+            $html .= '            <td class="tab_td">';
+            $html .= '                <a onclick="if(window.confirm(\'Etes vous sur ?\')) return true; else return false;" href="index.php?page=listing_user&delete_id=' . $data_user['id'] . '">';
+            $html .= '                    supprimer l\'utilisteur';
+            $html .= '                </a>';
+            $html .= '             </td>';
+            $html .= '        </tr>';
         }
 
-        $html.= '        </table>';
-        $html.= '   </div>';
-        $html.= '</div>';
-
+        $html .= '        </table>';
+        $html .= '   </div>';
+        $html .= '</div>';
     }
 }
-?>
