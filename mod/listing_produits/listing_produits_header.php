@@ -77,3 +77,4 @@ if (user_is_admin()) {
         $html .= '</div>';
     }
 }
+
