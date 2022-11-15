@@ -1,4 +1,6 @@
 <?php
+$html = "";
+if (user_is_admin()) {
 // Test pour suppression produit
 if (isset($_GET['delete_id']) && !empty($_GET['delete_id'])) {
 
@@ -78,5 +80,5 @@ if($rs && mysqli_num_rows($rs)){
     $html.= '</div>';
 
 }
-
+}
 ?>
