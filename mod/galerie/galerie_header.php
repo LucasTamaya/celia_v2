@@ -4,7 +4,7 @@ $sql = 'SELECT * FROM t_photo ORDER BY id DESC';
 // Execution requete
 $rs = query($sql);
 
-$html = '<h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Galerie des prestations</h1>';
+$html = '<h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Galerie Photos</h1>';
 $html .='<div class="bg_image">';
 $html .= '<div class="grid">';
 $html .= '<div class="grid-sizer"></div>';
