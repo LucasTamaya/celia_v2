@@ -21,6 +21,7 @@ if (is_file($url_php_header)) {
 
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <?php
     // Gestion du fichier _head
     $url_php_head = str_replace('.php', '_head.php', $url_php);
