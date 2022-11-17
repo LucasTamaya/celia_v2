@@ -39,8 +39,8 @@
     $html.= '</div>';
    // $html.= ' <div class="swiper-pagination"></div>';
     $html.= '</div>';
-    $html.= '<a href="#sectionAcceuilBas" class="btnAcceuilBas "><p class="text-4xl text-center"> v </p></a>';
-    $html.='</section>';
+    $html.= '<a href="#sectionAcceuilBas" class="btnAcceuilBas"><p class="text-4xl text-center"> v </p></a>';
+    $html.='</section >';
     $html.='<section id="sectionAcceuilBas">';
     $html.='<div class="presentation grid grid-cols-2 my-10 gap-x-20">';
     $html.='<div class="flex justify-center items-center">';
@@ -81,4 +81,3 @@
     $html.='</section>';
     $html.='<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>';
     $html.='<script src="js/accueil.js"></script>';
-?>
