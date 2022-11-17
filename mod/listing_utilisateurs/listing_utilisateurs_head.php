@@ -1,3 +1,1 @@
-<title> <?php echo $TITLE; ?> - Page Listing Utilisateur </title>
-
-
+<title>Admin - Listing utilisateurs </title>
