@@ -48,5 +48,5 @@ if (isset($_SESSION[SESSION_NAME]['panier']) && !empty($_SESSION[SESSION_NAME]['
         };
     })
 
-    get_stripe_session(lineItems);
+    // get_stripe_session(lineItems);
 </script>
