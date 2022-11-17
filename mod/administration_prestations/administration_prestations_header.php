@@ -25,6 +25,7 @@ if (user_is_admin()) {
         $h = array();
         $h['titre'] = $_POST['form_titre'];
         $h['prix'] = $_POST['form_prix'];
+        $h['id_stripe'] = $_POST['form_stripe'];
         $h['description'] = $_POST['form_description'];
         $h['fk_categorie'] = $_POST['form_categorie'];
         $h['temps'] = $_POST['form_temps'];
@@ -57,10 +58,8 @@ if (user_is_admin()) {
             // New
             $id_produit = sql_simple_insert('t_produit', $h);
         }
-
-
         // Redirection sur la page de modification du produit (meme page mais avec id_produit)
-        header('location: index.php?page=administration_prestations&id=' . $id_produit);
+        header('location: index.php?page=administration_prestations');
     }
 
     if (isset($_GET['id'])) {
@@ -78,6 +77,7 @@ if (user_is_admin()) {
         $data['titre'] = '';
         $data['fichier'] = '';
         $data['prix'] = '';
+        $data['id_stripe'] = '';
         $data['description'] = '';
         $data['fk_categorie'] = '';
         $data['temps'] = '';
@@ -97,6 +97,7 @@ if (user_is_admin()) {
     $html .= '           <input class="p-1 border rounded" placeholder="Description" type="text" name="form_description" value="' . $data['description'] . '"/>';
     $html .= '           <input class="p-1 border rounded" placeholder="Prix" type="number" name="form_prix" value="' . $data['prix'] . '"/>';
     $html .= '           <input class="p-1 border rounded" placeholder="Durée" type="number" name="form_temps" value="' . $data['temps'] . '"/>';
+    $html .= '           <input class="p-1 border rounded" placeholder="ID stripe" type="text" name="form_stripe" value="' . $data['id_stripe'] . '"/>';
     $sql_categorie = "SELECT * FROM t_categorie ORDER BY nom ASC";
     $rs_categorie = query($sql_categorie);
     $html .= '            <select class="p-1 border rounded" name="form_categorie" id="form_categorie">';
