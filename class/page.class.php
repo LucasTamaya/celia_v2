@@ -78,6 +78,10 @@ class Page
         }
 
         if (isset($_SESSION[SESSION_NAME]['id_user']) && !empty($_SESSION[SESSION_NAME]['id_user'])) {
+            // Panier
+            if (!user_is_admin()) {
+                $this->header .= '   <a class="text-white font-semibold" href="index.php?page=panier">Panier</a></div>';
+            }
             // Déconnexion
             $this->header .= '       <a class="text-white font-semibold" href="index.php?page=deconnection">Déconnection</a></div>';
         } else {
@@ -86,8 +90,6 @@ class Page
             $this->header .= '           Me connecter';
             $this->header .= '       </a>';
         }
-
-
         $this->header .= '    </nav>';
     }
 

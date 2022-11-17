@@ -17,6 +17,7 @@ if (isset($_POST) && !empty($_POST)) {
             // Enregistrement des informations en session
             $_SESSION[SESSION_NAME]['id_user'] = $data['id'];
             $_SESSION[SESSION_NAME]['nom_user'] = $data['prenom'] . ' ' . $data['nom'];
+            // créer le panier de l'utilisateur
             $data_panier = array();
             $_SESSION[SESSION_NAME]['panier'] = $data_panier;
             header("location: index.php");
