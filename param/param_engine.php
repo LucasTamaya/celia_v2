@@ -4,6 +4,7 @@ $page = array();
 // page pour les clients
 $page['accueil'] = 'mod/accueil/accueil.php';
 $page['prestations'] = 'mod/prestations/prestations.php';
+$page['description_prestation'] = 'mod/description_prestation/description_prestation.php';
 $page['galerie'] = 'mod/galerie/galerie.php';
 $page['panier'] = 'mod/panier/panier.php';
 $page['confirmation_paiement'] = 'mod/confirmation_paiement/confirmation_paiement.php';
