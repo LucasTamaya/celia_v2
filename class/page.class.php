@@ -97,7 +97,7 @@ class Page
                 $this->header .= '   <a class="text-white font-semibold" href="index.php?page=panier">Panier</a></div>';
             }
             // Déconnexion
-            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=deconnection">Déconnection</a></div>';
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=deconnection">Se Déconnecter</a></div>';
         } else {
             // Formulaire de connexion
             $this->header .= '       <a class="text-white font-semibold" href="index.php?page=connection">';
