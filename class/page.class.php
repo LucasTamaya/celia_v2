@@ -36,6 +36,20 @@ class Page
         $this->header .= '    <nav class="flex justify-evenly bg-blue-900 p-5">';
 
         if (user_is_admin()) {
+            // Accueil
+            $this->header .= '       <a class="text-white font-semibold" href="index.php">';
+            $this->header .= '           Acceuil';
+            $this->header .= '       </a>';
+
+            // Page Prestations
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=prestations">';
+            $this->header .= '           Prestations';
+            $this->header .= '       </a>';
+
+            // Page Galerie
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=galerie">';
+            $this->header .= '           Galerie';
+            $this->header .= '       </a>';
             // Page administration_produits
             $this->header .= '       <a class="text-white font-semibold" href="index.php?page=administration_prestations">';
             $this->header .= '           Ajouter une prestation';
