@@ -1,14 +1,21 @@
 <?php
 $html = "";
 if (user_is_admin()) {
-    // Test pour suppression utilisateur
-    if (isset($_GET['delete_id']) && !empty($_GET['delete_id'])) {
-
-        // Suppression de l'utilisateur
-        sql_simple_delete('t_photo', $_GET['delete_id']);
-
-        // Redirection vers le listing des utilisateurs
-        header("location: index.php?page=listing_galerie_photo");
+    
+    if (isset($_GET['delete_id'])  && !empty($_GET['delete_id'])) {
+        $id_suppr = $_GET['delete_id'];
+    
+        // Recuperer le nom de l'image
+        $image = squery("SELECT fichier FROM t_photo WHERE id=" . $id_suppr);
+    
+        // Supprimer l'enregistrement en BDD
+        sql_simple_delete('t_photo', $id_suppr);
+    
+        // Supprimer le fichier sur le disque
+        @unlink('images/galerie_image/' . $image);
+    
+        // Redirection
+        header('location: index.php?page=listing_galerie');
     }
 
     // Requete SQL
@@ -63,7 +70,7 @@ if (user_is_admin()) {
             // $html.= '                <a href="index.php?page=connection&id='.$data_photo['id'].'">';
             // $html.= '                    modifier la photo';
             // $html.= '                </a>';
-            $html.= '                <a onclick="if(window.confirm(\'Etes vous sur ?\')) return true; else return false;" href="index.php?page=listing_galerie_photo&delete_id='.$data_photo['id'].'">';
+            $html.= '                <a onclick="if(window.confirm(\'Etes vous sur ?\')) return true; else return false;" href="index.php?page=listing_galerie&delete_id='.$data_photo['id'].'">';
             $html.= '                    supprimer la photo';
             $html.= '                </a>';
             $html.= '             </td>';

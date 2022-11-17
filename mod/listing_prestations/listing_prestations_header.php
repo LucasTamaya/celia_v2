@@ -5,13 +5,13 @@ if (user_is_admin()) {
     if (isset($_GET['delete_id']) && !empty($_GET['delete_id'])) {
 
         $produit = $_GET['id'];
-
+        $image = squery("SELECT fichier FROM t_produit WHERE id=" . $id_produit);
         // Suppression du produit
         sql_simple_delete('t_produit', $_GET['delete_id']);
 
         //suppr fichier image
 
-        @unlink('pic/images/produits/' . $produit);
+        @unlink('images/produits/' . $produit);
 
         // Redirection vers le listing des produit
         header("location: index.php?page=listing_prestations");
