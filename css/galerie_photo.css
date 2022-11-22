@@ -13,13 +13,17 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* .bg_image {
-  background-image: url("../images/fontMarbrer.jpeg");
+.traiDoree{
+  background-image: url("../images/traidoree.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg {
+  background-image: url("../images/New_Elegant_Logo1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: rgb(4, 4, 56); */
-/* } */ 
+} 
 
 * {
   box-sizing: border-box;
