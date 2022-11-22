@@ -1,23 +1,9 @@
 <?php
 $html = '<section class="sectionAcceuilHaut">';
-$html .= '<div class="flex flex-col justify-center items-center my-10">';
+$html .= '<div class="flex flex-col justify-center items-center my-5">';
 $html .= '<img class="logo" src="images/New_Elegant_Logo1.jpg">';
 
-$html .= '<h1 class="text-4xl text-blue-900 font-bold mt-10"> Bienvenue chez Cé Beauté </h1>';
-$html .= '<h2 class="text-3xl text-blue-900 font-semibold border border-blue-900 rounded-full py-5 px-10 mt-10 mb-5">Horaires</h2>';
-$html .= '<div class="flex items-center mt-5">';
-$html .= '<i class="fas fa-calendar-alt text-blue-900 mr-5"></i>';
-$html .= '<p class="text-xl text-blue-900">Du lundi au vendredi 9h - 19h</p>';
-$html .= '</div>';
-$html .= '<p class="text-xl text-blue-900">Samedi 9h - 16h</p>';
-$html .= '<div class="flex items-center mt-5">';
-$html .= '<i class="fas fa-map-marker-alt text-blue-900 mr-5"></i>';
-$html .= '<p class="text-xl text-blue-900">Saint-léger-de-linières et ses alentours</p>';
-$html .= '</div>';
-$html .= '<div class="flex items-center mt-5">';
-$html .= '<i class="fas fa-phone text-blue-900 mr-5"></i>';
-$html .= '<p class="text-xl text-blue-900">06 71 43 04 16</p>';
-$html .= '</div>';
+$html .= '<h1 class="h1Acceuil text-2xl"> Bienvenu chez CéBeauté </h1>';
 $html .= '</div>';
 $html .= '   <div class="swiper mySwiper">';
 $html .= ' <div class="swiper-wrapper">';
@@ -53,8 +39,8 @@ $html .= '  </div>';
 $html .= '</div>';
 // $html.= ' <div class="swiper-pagination"></div>';
 $html .= '</div>';
-$html .= '<a href="#sectionAcceuilBas" class="btnAcceuilBas "><p class="text-4xl text-center"> v </p></a>';
-$html .= '</section>';
+$html .= '<a href="#sectionAcceuilBas" class="btnAcceuilBas"><p class="text-4xl text-center"> v </p></a>';
+$html .= '</section >';
 $html .= '<section id="sectionAcceuilBas">';
 $html .= '<div class="presentation grid grid-cols-2 my-10 gap-x-20">';
 $html .= '<div class="flex justify-center items-center">';

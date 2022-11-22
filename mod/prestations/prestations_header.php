@@ -54,6 +54,7 @@ if (isset($_GET['fk_categorie'])) {
         }
         $html .= '</ul>';
     }
+
 } 
 
 ?>
