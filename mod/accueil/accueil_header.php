@@ -95,3 +95,4 @@ $html .= '</div>';
 $html .= '</section>';
 $html .= '<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>';
 $html .= '<script src="js/accueil.js"></script>';
+?>
