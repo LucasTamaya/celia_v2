@@ -1,0 +1,1 @@
+<title>CéBeauté - Remerciement</title>

@@ -6,7 +6,8 @@ $page['accueil'] = 'mod/accueil/accueil.php';
 $page['prestations'] = 'mod/prestations/prestations.php';
 $page['galerie'] = 'mod/galerie/galerie.php';
 $page['panier'] = 'mod/panier/panier.php';
-$page['confirmation_paiement'] = 'mod/confirmation_paiement/confirmation_paiement.php';
+$page['chargement_paiement'] = 'mod/chargement_paiement/chargement_paiement.php';
+$page['remerciement'] = 'mod/remerciement/remerciement.php';
 
 // page pour l'admin
 $page['administration_prestations'] = 'mod/administration_prestations/administration_prestations.php';
