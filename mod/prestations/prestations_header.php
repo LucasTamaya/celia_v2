@@ -1,13 +1,19 @@
 <?php
- $html = '<h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Prestations</h1>';
+$html = '<div class="traiDoree h-1"></div>';
+$html .= '<div class="flex flex-row justify-center items-center bg-white">';
+$html .= '<img class="w-28 h-10" src="images\cildroreegauche.PNG"><h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Prestations</h1><img class="w-28 h-10" src="images\cilsdoreedroite.PNG">';
+$html .= '</div>';
+$html .= '<div class="traiDoree h-1"></div>';
 
 if (!isset($_GET['fk_categorie'])) {
-    $html .= '      <div class="max-w-3xl flex justify-center ">';
-$html .= '          <div><a class="text-lg  font-semibold" href="index.php?page=prestations&fk_categorie=1">Epilations</a></div>';
-$html .= '          <div><a class="text-lg  font-semibold" href="index.php?page=prestations&fk_categorie=2">Soins</a></div>';
-$html .= '          <div><a class="text-lg  font-semibold" href="index.php?page=prestations&fk_categorie=3">Cils / Sourcils</a></div>';
-$html .= '          <div><a class="text-lg  font-semibold" href="index.php?page=prestations&fk_categorie=4">Onglerie</a></div>';
+$html .= ' <div class="grid grid-cols-2 my-16 w-fit mx-auto gap-24">';
+$html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=1"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Epilations</h2></div></a></div>';
+$html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=2"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Soins</h2></div></a></div>';
+$html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=3"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Cils & Sourcils</h2></div></a></div>';
+$html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=4"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Onglerie</h2></div></a></div>';
 $html .= '      </div>';
+
+
 }
 
 
@@ -28,12 +34,12 @@ if (isset($_GET['fk_categorie'])) {
     if ($rs_categorie && mysqli_num_rows($rs_categorie)) {
         while ($data_produits = mysqli_fetch_assoc($rs_categorie)) {
             $html .= '<li class="border-2 border-yellow-300 rounded">';
-            $html .= ' <div class="grid grid-cols-5 justify-center items-center my-2 mx-5">';
+            $html .= ' <div class="grid grid-cols-5 justify-center items-center my-2 mx-5 text-white">';
             $html .= '  <h2 class="text-lg font-bold mb-2">' . $data_produits['titre'] . '</h2>';
             $html .= '      <p>' . $data_produits['prix'] . '&euro;</p>';
             $html .= '      <p>' . $data_produits['temps'] . 'min</p>';
-            $html .= '  <a href="index.php?page=description_prestation&id=' . $data_produits['id'] . '"><img src="images\voir.png"></a>';
-            $html .= '  <a  href="index.php?page=prestations&id=' . $data_produits['id'] . '"><img src="images\shopping.png"></a>';
+            $html .= '  <a href="index.php?page=description_prestation&id=' . $data_produits['id'] . '"><i class="fa-solid fa-eyes"></i></a>';
+            $html .= '  <a  href="index.php?page=prestations&id=' . $data_produits['id'] . '"><i class="fa-solid fa-cart-shopping"></i></a>';
             $html .= '  </div>';
             $html .= '</li>';
         }
