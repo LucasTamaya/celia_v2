@@ -4,7 +4,7 @@ if (user_is_admin()) {
     // Test pour suppression produit
     if (isset($_GET['delete_id']) && !empty($_GET['delete_id'])) {
 
-        $produit = $_GET['id'];
+        $produit = $_GET['delete_id'];
         $image = squery("SELECT fichier FROM t_produit WHERE id=" . $id_produit);
         // Suppression du produit
         sql_simple_delete('t_produit', $_GET['delete_id']);

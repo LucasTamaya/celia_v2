@@ -33,7 +33,7 @@ class Page
     private function build_header()
     {
         $this->header = '<body>';
-        $this->header .= '    <nav class="flex justify-evenly bg-blue-900 p-5">';
+        $this->header .= '    <nav class="flex justify-evenly p-5">';
 
         if (user_is_admin()) {
             // Accueil
@@ -97,7 +97,7 @@ class Page
                 $this->header .= '   <a class="text-white font-semibold" href="index.php?page=panier">Panier</a></div>';
             }
             // Déconnexion
-            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=deconnection">Déconnection</a></div>';
+            $this->header .= '       <a class="text-white font-semibold" href="index.php?page=deconnection">Se Déconnecter</a></div>';
         } else {
             // Formulaire de connexion
             $this->header .= '       <a class="text-white font-semibold" href="index.php?page=connection">';
