@@ -3,15 +3,15 @@ html{
 }
 .h1Acceuil {
   height: 10vh;
-  color:rgb(7, 7, 60);
+  color: rgb(7, 7, 60);
 }
 
-.logo{
-  height:37vh;
+.logo {
+  height: 37vh;
 }
 .btnAcceuilBas {
   height: 9vh;
-  color:rgb(7, 7, 60) ;
+  color: rgb(7, 7, 60);
 }
 
 .swiper {
@@ -26,17 +26,16 @@ html{
   height: 300px;
 }
 
-
 #sliderUn {
   background-color: rgb(207, 10, 10);
 }
 
-#sectionAcceuilBas{
+#sectionAcceuilBas {
   height: 100vh;
 }
-.photoProfil{
+.photoProfil {
   height: 30vh;
 }
-.parcoursDiv{
+.parcoursDiv {
   height: 110px;
 }
