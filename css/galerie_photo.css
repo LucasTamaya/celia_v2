@@ -9,13 +9,17 @@ html {
 
 body {
   font-family: sans-serif;
-}
-
-.bg_image {
-  background-image: url("../images/New_Elegant_Logo1.jpg");
+  background-image: url("../images/fontMarbrer.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* .bg_image {
+  background-image: url("../images/fontMarbrer.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: rgb(4, 4, 56); */
+/* } */ 
 
 * {
   box-sizing: border-box;

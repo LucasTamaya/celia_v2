@@ -33,7 +33,7 @@ class Page
     private function build_header()
     {
         $this->header = '<body>';
-        $this->header .= '    <nav class="flex justify-evenly bg-blue-900 p-5">';
+        $this->header .= '    <nav class="flex justify-evenly p-5">';
 
         if (user_is_admin()) {
             // Accueil
