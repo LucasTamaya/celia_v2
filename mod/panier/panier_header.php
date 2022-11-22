@@ -47,10 +47,9 @@ if (isset($_SESSION[SESSION_NAME]['panier']) && !empty($_SESSION[SESSION_NAME]['
         }
     }
     $html .= '</ul>';
-
     // affichage montant total du panier
     $html .= '<div class="w-full flex justify-center mt-5">';
-    $html .= '  <a href="index.php?page=confirmation_paiement" class="w-full max-w-xl text-white text-center font-semibold bg-blue-900 rounded py-2 mx-auto">Confirmez et payez ' . $montant_total_panier . '&euro;</a>';
+    $html .= '  <a href="index.php?page=chargement_paiement" class="w-full max-w-xl text-white text-center font-semibold bg-blue-900 rounded py-2 mx-auto">Confirmez et payez ' . $montant_total_panier . '&euro;</a>';
     $html .= '</div>';
 } else {
     $html .= "<h1> Votre panier est vide ! </h1>";

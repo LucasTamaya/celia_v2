@@ -20,8 +20,19 @@ if (is_file($url_php_header)) {
 <html>
 
 <head>
+    <script src="https://kit.fontawesome.com/d19de467c5.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'header': "url('./images/header_bg.png')",
+                    }
+                },
+            },
+        };
+    </script>
     <?php
     // Gestion du fichier _head
     $url_php_head = str_replace('.php', '_head.php', $url_php);
@@ -37,7 +48,6 @@ if (is_file($url_php_header)) {
     <?php
     require $url_php;
     ?>
-    <!-- <script src="https://js.stripe.com/v3/"></script> -->
 </body>
 
 </html>
