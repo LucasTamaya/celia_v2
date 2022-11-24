@@ -30,8 +30,9 @@ if (isset($_POST) && !empty($_POST)) {
 }
 
 // formulaire de connexion
-$html = '<div class="w-full h-[80vh] flex justify-center items-center">';
-$html .= '  <div class="flex-1 max-w-[400px] mx-auto border-2 rounded p-5">';
+$html = '<div class="w-full h-[80vh] flex justify-center items-center bg-cadre bg-cover md:bg-auto bg-center bg-no-repeat">';
+
+$html .= '  <div class=" flex-1 max-w-[400px] mx-auto border-2 rounded p-5">';
 $html .= '    <h1 class="text-2xl text-blue-900 font-semibold mb-3">Connexion</h1>';
 $html .= '    <form class="flex flex-col gap-y-3" action="index.php?page=connection" method="POST" id="form_co" name="form_co">';
 $html .= '        <input class="p-1 border rounded" type="text" name="email" id="email" placeholder="Email"/>';

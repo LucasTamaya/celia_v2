@@ -29,6 +29,7 @@ if (is_file($url_php_header)) {
                     backgroundImage: {
                         'marbre': "url('./images/marbre_bg.png')",
                         'trait-or': "url('./images/traidoree.PNG')",
+                        'cadre' : "url('./images/encadre.jpeg')",
                     }
                 },
             },

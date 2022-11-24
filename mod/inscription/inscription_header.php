@@ -26,7 +26,7 @@ $data['nom'] = '';
 $data['prenom'] = '';
 $data['email'] = '';
 
-$html = '<div class="w-full h-[80vh] flex justify-center items-center">';
+$html = '<div class="w-full h-[80vh] flex justify-center items-center bg-cadre bg-cover md:bg-auto bg-center bg-no-repeat">';
 $html .= '  <div class="flex-1 max-w-[400px] mx-auto border-2 rounded p-5">';
 $html .= '      <h1 class="text-2xl text-blue-900 font-semibold mb-3">Inscription</h1>';
 $html .= '      <form class="flex flex-col gap-y-3" method="POST" action="index.php?page=inscription" enctype="multipart/form-data">';

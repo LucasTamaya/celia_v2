@@ -27,7 +27,7 @@ foreach ($stripe_ids as $id) {
 
 header('Content-Type: application/json');
 
-$BASE_URL = "http://localhost/htdocs/celia_v2";
+$BASE_URL = "https://localhost/htdocs/celia_v2";
 
 $checkout_session = \Stripe\Checkout\Session::create([
     'line_items' => $line_items,

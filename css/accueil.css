@@ -39,3 +39,8 @@ html{
 .parcoursDiv {
   height: 110px;
 }
+.traiDoree{
+  background-image: url("../images/traidoree.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
