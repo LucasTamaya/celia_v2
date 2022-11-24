@@ -1,7 +1,7 @@
 <?php
 $html = '<div class="traiDoree h-1"></div>';
-$html .= '<div class="flex flex-row justify-center items-center bg-white">';
-$html .= '<img class="w-28 h-10 rotate-[-20deg]" src="images\cildroreegauche.PNG"><h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Prestations</h1><img class="overflow-hidden w-28 h-10 rotate-[-30deg]" src="images\gauche.PNG">';
+$html .= '<div class="flex flex-row justify-center items-center bg-white overflow-hidden">';
+$html .= '<img class="w-28 h-10 rotate-[-20deg]" src="images\cildroreegauche.PNG"><h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Prestations</h1><img class=" w-28 h-10 rotate-[-40deg]" src="images\gauche.PNG">';
 $html .= '</div>';
 $html .= '<div class="traiDoree h-1"></div>';
 // $html .= '<form method="POST" action="index.php?page=prestations"><input class="p-1 border rounded" placeholder="chercher une prestation" type="text" name="search" value=""/><button class="text-white" type="submit" name="valider"><i class="fas fa-search"></i></button></form>  ';
