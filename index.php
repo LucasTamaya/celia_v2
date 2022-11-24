@@ -27,7 +27,8 @@ if (is_file($url_php_header)) {
             theme: {
                 extend: {
                     backgroundImage: {
-                        'header': "url('./images/header_bg.png')",
+                        'marbre': "url('./images/marbre_bg.png')",
+                        'trait-or': "url('./images/traidoree.PNG')",
                     }
                 },
             },

@@ -33,7 +33,7 @@ class Page
     private function build_header()
     {
         $this->header = '<body>';
-        $this->header .= '    <nav class="flex justify-evenly bg-header bg-cover p-7">';
+        $this->header .= '    <nav class="flex items-center justify-evenly bg-marbre bg-cover h-[10vh]">';
 
         if (user_is_admin()) {
             // Accueil
@@ -110,7 +110,15 @@ class Page
 
     private function build_footer()
     {
-        $this->footer .= '    <div id="html_footer"></div>';
+        $this->footer .= '      <div class="bg-trait-or h-[1vh]"></div>';
+        $this->footer .= '      <footer class="relative bottom-0 h-[9vh] flex items-center justify-evenly bg-marbre bg-cover w-full">';
+        $this->footer .= '              <a class="text-white font-semibold" href="$">Mentions légales</a>';
+        $this->footer .= '              <a class="text-white font-semibold" href="$">RGPD</a>';
+        $this->footer .= '              <div class="flex items-center gap-x-5">';
+        $this->footer .= '                  <a class="text-white font-semibold" href="$"><i class="fab fa-instagram text-3xl"></i></a>';
+        $this->footer .= '                  <a class="text-white font-semibold" href="$"><i class="fab fa-facebook-square text-3xl"></i></a>';
+        $this->footer .= '              <div>';
+        $this->footer .= '      </footer>';
         $this->footer .= '</body>';
     }
 }
