@@ -1,10 +1,10 @@
 <?php
 $html = '<div class="traiDoree h-1"></div>';
 $html .= '<div class="flex flex-row justify-center items-center bg-white">';
-$html .= '<img class="w-28 h-10" src="images\cildroreegauche.PNG"><h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Prestations</h1><img class="w-28 h-10" src="images\cilsdoreedroite.PNG">';
+$html .= '<img class="w-28 h-10 rotate-[-20deg]" src="images\cildroreegauche.PNG"><h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Prestations</h1><img class="overflow-hidden w-28 h-10 rotate-[-30deg]" src="images\gauche.PNG">';
 $html .= '</div>';
 $html .= '<div class="traiDoree h-1"></div>';
-
+// $html .= '<form method="POST" action="index.php?page=prestations"><input class="p-1 border rounded" placeholder="chercher une prestation" type="text" name="search" value=""/><button class="text-white" type="submit" name="valider"><i class="fas fa-search"></i></button></form>  ';
 if (!isset($_GET['fk_categorie'])) {
 $html .= ' <div class="grid grid-cols-2 my-24 w-fit mx-auto gap-24">';
 $html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=1"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Epilations</h2></div></a></div>';
@@ -55,5 +55,15 @@ if (isset($_GET['fk_categorie'])) {
         $html .= '</ul>';
     }
 } 
-
+// if (isset($_POST) && !empty($_POST)) {
+//     $search = $_POST['search'];
+//     $sql_search = 'SELECT * FROM t_produit WHERE titre ="'.$search.'"';
+//     $rs_search = query($sql_search);
+//     if ($rs_search && mysqli_num_rows($rs_search)) {
+//         while ($data_search = mysqli_fetch_assoc($rs_search)) {
+//             $html .= '  <h2 class="text-lg">' . $data_search['titre'] . '</h2>';
+//             echo $data_search['titre'];
+//         }
+//     }
+// }
 ?>
