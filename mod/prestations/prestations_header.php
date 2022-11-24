@@ -53,6 +53,7 @@ if (isset($_GET['fk_categorie'])) {
             $html .= '</li>';
         }
         $html .= '</ul>';
+        $html .= '      </div>';
     }
 } 
 // if (isset($_POST) && !empty($_POST)) {

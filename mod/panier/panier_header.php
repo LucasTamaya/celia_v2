@@ -2,6 +2,7 @@
 
 $montant_total_panier = 0;
 $html = '';
+$html .= '<div class="min-h-[80vh] flex flex-col">';
 $html .= '<h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Mon panier</h1>';
 $html .= '<ul class="max-w-7xl mx-auto grid grid-cols-1 gap-5">';
 
@@ -51,6 +52,8 @@ if (isset($_SESSION[SESSION_NAME]['panier']) && !empty($_SESSION[SESSION_NAME]['
     $html .= '<div class="w-full flex justify-center mt-5">';
     $html .= '  <a href="index.php?page=chargement_paiement" class="w-full max-w-xl text-white text-center font-semibold bg-blue-900 rounded py-2 mx-auto">Confirmez et payez ' . $montant_total_panier . '&euro;</a>';
     $html .= '</div>';
+    $html .= '</div>';
 } else {
     $html .= "<h1> Votre panier est vide ! </h1>";
+    $html .= '</div>';
 }
