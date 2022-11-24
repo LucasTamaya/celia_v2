@@ -1,5 +1,6 @@
 <?php
-$html = '<section class="sectionAcceuilHaut">';
+$html = '<div class="traiDoree h-1"></div>';
+$html .= '<section class="sectionAcceuilHaut">';
 $html .= '<div class="flex flex-col justify-center items-center my-5">';
 $html .= '<img class="logo" src="images/New_Elegant_Logo1.jpg">';
 

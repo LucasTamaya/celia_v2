@@ -1,5 +1,6 @@
 <?php
-$html = '<div class="traiDoree h-1"></div>';
+$html = '<div class="min-h-[80vh] flex flex-col">';
+$html .= '<div class="traiDoree h-1"></div>';
 $html .= '<div class="flex flex-row justify-center items-center bg-white overflow-hidden">';
 $html .= '<img class="w-28 h-10 rotate-[-20deg]" src="images\cildroreegauche.PNG"><h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Prestations</h1><img class=" w-28 h-10 rotate-[-40deg]" src="images\gauche.PNG">';
 $html .= '</div>';
@@ -48,14 +49,15 @@ if (isset($_GET['fk_categorie'])) {
             $html .= '      <p>' . $data_produits['prix'] . '&euro;</p>';
             $html .= '      <p>' . $data_produits['temps'] . 'min</p>';
             $html .= '  <a href="index.php?page=description_prestation&id=' . $data_produits['id'] . '"><i class="far fa-eye"></i></a>';
-            $html .= '  <a  href="index.php?page=prestations&id=' . $data_produits['id'] . '"><i class="fas fa-shopping-cart"></i></a>';
+            $html .= '  <a  href="index.php?page=prestations&id=' . $data_produits['id'] . '&fk_categorie=' . $data_produits['fk_categorie'] . '"><i class="fas fa-shopping-cart"></i></a>';
             $html .= '  </div>';
             $html .= '</li>';
         }
         $html .= '</ul>';
-        $html .= '      </div>';
+        $html .= '</div>';
     }
 } 
+//mettre en place la recherche
 // if (isset($_POST) && !empty($_POST)) {
 //     $search = $_POST['search'];
 //     $sql_search = 'SELECT * FROM t_produit WHERE titre ="'.$search.'"';

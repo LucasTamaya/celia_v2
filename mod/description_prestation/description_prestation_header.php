@@ -1,5 +1,6 @@
 <?php
-$html = '<div class="traiDoree h-1"></div>';
+$html = '<div class="min-h-[80vh]">';
+$html .= '<div class="traiDoree h-1"></div>';
 $html .= '<div class="flex flex-row justify-center items-center bg-white">';
 $html .= '<img class="w-28 h-10" src="images\cildroreegauche.PNG"><h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Détails</h1><img class="w-28 h-10" src="images\cilsdoreedroite.PNG">';
 $html .= '</div>';
@@ -25,11 +26,11 @@ $html .= '<div class="traiDoree h-1"></div>';
                 $html .='<p class="text-center text-xl  font-semibold my-5">'.$data['prix'].'&euro;</p>';
                 $html .='<p class="text-center text-xl  font-semibold my-5">'.$data['temps'].'min</p>';
                 $html .='</div>'; 
-                $html .= '  <a class="block w-full text-3xl py-2 rounded text-center text-yellow-300 font-bold" href="index.php?page=prestations&id=' . $data['id'] . '"> Ajouter au panier </a>'; 
+                $html .= '  <a class="block w-full text-3xl py-2 rounded text-center text-yellow-300 font-bold" href="index.php?page=prestations&id=' . $data['id'] . '&fk_categorie=' . $data['fk_categorie'] . '"> Ajouter au panier </a>';
                 $html .='</div>'; 
                 $html .='</div>';
             }
         }
     }
-
+    $html .='</div>';
 ?>

@@ -1,19 +1,10 @@
-* {
-  box-sizing: border-box;
-}
-
-/* force scrollbar */
-html {
-  overflow-y: scroll;
-}
-
 body {
   font-family: sans-serif;
   background-image: url("../images/fontMarbrer.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.traiDoree{
+.traiDoree {
   background-image: url("../images/traidoree.PNG");
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,22 +14,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: rgb(4, 4, 56); */
-} 
-
-* {
-  box-sizing: border-box;
 }
-
-/* force scrollbar */
-html {
-  overflow-y: scroll;
-}
-
-body {
-  font-family: sans-serif;
-}
-
-/* ---- grid ---- */
 
 /* clear fix */
 .grid:after {

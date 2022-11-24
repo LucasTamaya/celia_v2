@@ -110,7 +110,7 @@ class Page
 
     private function build_footer()
     {
-        $this->footer .= '      <div class="bg-trait-or h-[1vh]"></div>';
+        $this->footer .= '      <div class="bg-trait-or h-[0.5vh]"></div>';
         $this->footer .= '      <footer class="relative bottom-0 h-[9vh] flex items-center justify-evenly bg-marbre bg-cover w-full">';
         $this->footer .= '              <a class="text-white font-semibold" href="$">Mentions légales</a>';
         $this->footer .= '              <a class="text-white font-semibold" href="$">RGPD</a>';
