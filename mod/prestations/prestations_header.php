@@ -1,19 +1,18 @@
 <?php
-$html = '<div class="traiDoree h-1"></div>';
+$html = '<div class="min-h-[80vh] flex flex-col">';
+$html .= '<div class="traiDoree h-1"></div>';
 $html .= '<div class="flex flex-row justify-center items-center bg-white">';
 $html .= '<img class="w-28 h-10" src="images\cildroreegauche.PNG"><h1 class="text-center text-3xl text-blue-900 font-semibold my-5">Prestations</h1><img class="w-28 h-10" src="images\cilsdoreedroite.PNG">';
 $html .= '</div>';
 $html .= '<div class="traiDoree h-1"></div>';
 
 if (!isset($_GET['fk_categorie'])) {
-$html .= ' <div class="grid grid-cols-2 my-16 w-fit mx-auto gap-24">';
-$html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=1"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Epilations</h2></div></a></div>';
-$html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=2"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Soins</h2></div></a></div>';
-$html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=3"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Cils & Sourcils</h2></div></a></div>';
-$html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=4"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Onglerie</h2></div></a></div>';
-$html .= '      </div>';
-
-
+    $html .= ' <div class="grid grid-cols-2 my-16 w-fit mx-auto gap-24">';
+    $html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=1"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Epilations</h2></div></a></div>';
+    $html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=2"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Soins</h2></div></a></div>';
+    $html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=3"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Cils & Sourcils</h2></div></a></div>';
+    $html .= '          <div class="flex"><a href="index.php?page=prestations&fk_categorie=4"><div class="bgimg h-80 w-80"></div> <div><h2 class="text-lg text-center text-white font-semibold">Onglerie</h2></div></a></div>';
+    $html .= ' </div>';
 }
 
 
@@ -44,5 +43,6 @@ if (isset($_GET['fk_categorie'])) {
             $html .= '</li>';
         }
         $html .= '</ul>';
+        $html .= '      </div>';
     }
 }
